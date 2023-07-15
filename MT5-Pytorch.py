@@ -13,7 +13,7 @@ model = model.to(device)
 tokenizer = T5Tokenizer.from_pretrained("google/mt5-large")
 
 # Create a large batch of inputs
-all_articles = ["UN Offizier sagt, dass weiter verhandelt werden muss in Syrien."] * 80  # Adjust as needed
+all_articles = ["UN Offizier sagt, dass weiter verhandelt werden muss in Syrien."] * 50  # Adjust as needed
 
 # Specify batch size
 batch_size = 50
