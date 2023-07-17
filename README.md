@@ -26,7 +26,9 @@ Below are the results from the fine tuning of the model to now be able to perfor
 
 <img src="/images/GPU_utilization.png" width="75%">
 
-<img src="/images/GPU_time_spent_acc_mem.png" width="75%">
+Below are further results of GPU utils.
+
+<img src="/images/GPU_time _spent_acc_mem.png" width="75%">
 
 
 # Citations and sources
