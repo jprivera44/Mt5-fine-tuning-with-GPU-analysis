@@ -7,11 +7,17 @@ The mt5 is a transformer based langauge model developed by Google Research(Xue e
 
 # Purpose
 
-The purpose of this repo is to fine tune the Mt5 langauge model to perform question answering in spansih.
+The purpose of this repo is to fine tune the Mt5 langauge model to perform question answering in Spansih. I am specifically working with the [Squad_es](https://huggingface.co/datasets/squad_es) dataset present on HuggingFace.
 
 
 
 # Methods
 
+To complete this work, I leveraged cloud GPUs from PaperSpace, due to access to direct CUDA kernel statistics unlike Google Colab. Access to Nvidia tools was critical during this development to better glean insights on optimal hyper parameter tuning. The most 
+
 
 # Results
+
+# Citations and sources
+
+
