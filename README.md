@@ -24,6 +24,11 @@ Below are the results from the fine tuning of the model to now be able to perfor
 <img src="/images/best_train_loss.png" width="75%">
 
 
+<img src="/images/GPU_utilization.png" width="75%">
+
+<img src="/images/GPU_time_spent_acc_mem.png" width="75%">
+
+
 # Citations and sources
 
 
