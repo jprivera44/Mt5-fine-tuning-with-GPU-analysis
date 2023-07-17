@@ -1,9 +1,11 @@
+#Script that runs the Fine tuning separetely in order to create CUDA statistics
+#Needs to be run separate in order to not take too much GPU memory.
+#Author: JP Rivera
 
 
 import torch
 import pickle
 import argparse
-#from transformers import AutoModel
 from transformers import TrainingArguments, Trainer
 import numpy as np
 from transformers import MT5ForConditionalGeneration, Trainer, TrainingArguments
@@ -41,10 +43,9 @@ def main(model_path: str, train_data_path: str, val_data_path: str, training_arg
     # Train the model
     trainer.train()
 
-    # Define your compute_metrics function here (or import it if it's defined elsewhere)
 
-    # Rest of your script
 
+#Main method acctps inpus args
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--model_path", type=str)
@@ -54,5 +55,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
     main(args.model_path, args.train_data_path, args.val_data_path, args.training_args_path)
 
-    
-    #Mt5-fine-tuning.py: error: unrecognized arguments: --model_train_data model_input/train_data.pkl --model_val_data model_input/val_data.pkl
+   
