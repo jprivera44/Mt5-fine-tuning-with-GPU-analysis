@@ -20,9 +20,8 @@ To complete this work, I leveraged cloud GPUs from PaperSpace, due to access to 
 
 Below are the results from the fine tuning of the model to now be able to perform question answering in Spanish based off the SQUAD dataset.
 
-#![Fine Tune Results](/images/best_train_loss.png)
 
-<img src="/images/best_train_loss.png" width="50%">
+<img src="/images/best_train_loss.png" width="75%">
 
 
 # Citations and sources
