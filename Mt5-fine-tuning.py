@@ -3,8 +3,9 @@
 import torch
 import pickle
 import argparse
-from transformers import AutoModel
+#from transformers import AutoModel
 from transformers import TrainingArguments, Trainer
+from transformers import MT5ForConditionalGeneration, Trainer, TrainingArguments
 
 # Define the compute metrics function
 def compute_metrics(eval_pred):
@@ -15,7 +16,8 @@ def compute_metrics(eval_pred):
 
 def main(model_path: str, train_data_path: str, val_data_path: str, training_args_path: str):
     #model = torch.load(model_path)  # Load the model
-    model = AutoModel.from_pretrained(model_path)
+    #model = AutoModel.from_pretrained(model_path)
+    model = MT5ForConditionalGeneration.from_pretrained(model_path)
     training_args = torch.load(training_args_path)  # Load the training arguments
     
     
