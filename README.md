@@ -13,10 +13,16 @@ The purpose of this repo is to fine tune the Mt5 langauge model to perform quest
 
 # Methods
 
-To complete this work, I leveraged cloud GPUs from PaperSpace, due to access to direct CUDA kernel statistics unlike Google Colab. Access to Nvidia tools was critical during this development to better glean insights on optimal hyper parameter tuning. The most 
+To complete this work, I leveraged cloud GPUs from PaperSpace, due to access to direct CUDA kernel statistics unlike Google Colab. Access to Nvidia tools was critical during this development to better glean insights on optimal hyper parameter tuning. The most time intensive task, was the data cleaning and processing before being able to be fine tuned.
 
 
 # Results
+
+Below are the results from the fine tuning of the model to now be able to perform question answering in Spanish based off the SQUAD dataset.
+
+![Fine Tune Results](/images/best_train_loss.png)
+
+
 
 # Citations and sources
 
