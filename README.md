@@ -28,22 +28,22 @@ The main portion of this project is the fine-tuning of the MT5 model. I ran this
 Below are the results from the fine tuning of the model to now be able to perform question answering in Spanish based off the SQUAD dataset.
 
 
-#
-Image 1: GPU Utilization
+### GPU Utilization
+
 #
 <img src="/images/cuda_statistics.png" width="75%">
 
 The table above is the output from the nsys Nvidia GPU profiler. I am showing this in order to get a better udnerstandign of how exactly the GPU spends time. Let's break down what these actually mean.
 
- ## cudaStreamSynchronize(49.9%):
+#### cudaStreamSynchronize(49.9%):
 
  Here we can see that a lot of time is spent communicating between the CPU & GPU indicating that the code has inefficies with the GPU sitting idle. The current implementation is in PyTorch which could be revisted to see if there is a better framework to use.
 
-## cudaLaunchKernel(27.4%)
+#### cudaLaunchKernel(27.4%)
  
 This command above is used to launch cuda kernals which accounts for a quarter of time. This is higher than expected, altough it might be due to my small batch size. A future fix to reduce overhead could be to do a kernel fusion in order to do more work per kernel.
 
-## cudaMemcpyAsync (24.2%)
+#### cudaMemcpyAsync (24.2%)
 
 The above workflow indicates that there are asynchronous data transfers occuring in small but frequent manner. This is likley due to my small batch size, compared to the total amount of data. I'm not sure how I can optimize this, since if I increase the batch size there are errors within the exectuion, needs further analysis.
 
@@ -51,7 +51,7 @@ The above workflow indicates that there are asynchronous data transfers occuring
 
 
 
-Image 2: GPU Utilization
+### GPU Utilization
 #
 <img src="/images/GPU_utilization.png" width="75%">
 
@@ -66,7 +66,7 @@ One of the most time consuming processes within a GPU is the time it takes to tr
 #
 
 
-Image 4: Train/loss
+### Train/loss
 #
 <img src="/images/best_train_loss.png" width="75%">
 
