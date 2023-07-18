@@ -27,16 +27,22 @@ The main portion of this project is the fine-tuning of the MT5 model. I ran this
 
 Below are the results from the fine tuning of the model to now be able to perform question answering in Spanish based off the SQUAD dataset.
 
-
+Image 1: Train/loss
 <img src="/images/best_train_loss.png" width="75%">
 
+Above you can see the training loss over time, wtih a slight increase in loss tofwatd the 1k mark for the inputs.
 
+Image 2: GPU Utilization
 <img src="/images/GPU_utilization.png" width="75%">
+
+The above graph showcases the GPU utilization across time, this metric was key in hyper paramter runing to make sure I wasn't overloading the GPU, and using it efficiently. This graph chaged from a previous hyper-parameters when the GPU utilization was too low.
 
 Below are further results of GPU utils.
 
+Image 3: Time spent accessing memory
 <img src="/images/GPU_time _spent_acc_mem.png" width="75%">
 
+One of the most time consuming processes within a GPU is the time it takes to transfer data between the disk and GPU. I wanted to graph this out to make sure this wasn't a huge bottleneck, that I needed to address.
 
 # Citations and sources
 
