@@ -37,7 +37,7 @@ The table above is the output from the nsys Nvidia GPU profiler. I am showing th
 
 #### cudaStreamSynchronize(49.9%):
 
- Here we can see that a lot of time is spent communicating between the CPU & GPU indicating that the code has inefficies with the GPU sitting idle. The current implementation is in PyTorch which could be revisted to see if there is a better framework to use.
+This workflow blocks the CPU until all previously issued commands in the CUDA stream have been completed. Here we can see that a lot of time is spent communicating between the CPU & GPU indicating that the code has inefficies with the GPU sitting idle. The current implementation is in PyTorch which could be revisted to see if there is a better framework to use.
 
 #### cudaLaunchKernel(27.4%)
  
@@ -55,7 +55,7 @@ The above workflow indicates that there are asynchronous data transfers occuring
 #
 <img src="/images/GPU_utilization.png" width="75%">
 
-The above graph showcases the GPU utilization across time, this metric was key in hyper paramter runing to make sure I wasn't overloading the GPU, and using it efficiently. This graph chaged from a previous hyper-parameters when the GPU utilization was too low.
+The above graph showcases the GPU utilization across time, this metric was key in hyper paramter tuning to make sure I wasn't overloading the GPU, and using it efficiently. This graph changed from a previous hyper-parameters when the GPU utilization was too low.
 #
 
 ### Time spent accessing memory
@@ -70,7 +70,7 @@ One of the most time consuming processes within a GPU is the time it takes to tr
 #
 <img src="/images/best_train_loss.png" width="75%">
 
-Above you can see the training loss over time, wtih a slight increase in loss tofwatd the 1k mark for the inputs.
+Above you can see the training loss over time, wtih a slight increase in loss tofwatd the 1k mark for the inputs. After the training we can see the fine tuning seems to be successful, the last check is to make sure that the model did not overfit the data.
 
 # Citations and sources
 
