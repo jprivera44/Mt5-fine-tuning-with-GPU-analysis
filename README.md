@@ -15,6 +15,13 @@ The purpose of this repo is to fine tune the Mt5 langauge model to perform quest
 
 To complete this work, I leveraged cloud GPUs from PaperSpace, due to access to direct CUDA kernel statistics unlike Google Colab. Access to Nvidia tools was critical during this development to better glean insights on optimal hyper parameter tuning. The most time intensive task, was the data cleaning and processing before being able to be fine tuned.
 
+This project involved a number of steps that utilized deep learning techniques, data preprocessing, GPU analysis, and fine-tuning of the MT5 model for the specific task of question-answering in Spanish.
+
+Initially, the large SQuAD_es dataset was loaded and preprocessed to fit the format required for the HuggingFace [Trainer class](https://huggingface.co/docs/transformers/main_classes/trainer). This preprocessing stage involved combining the context and question into a single string and appropriately formatting the answer. The preprocessed data was then tokenized using the T5TokenizerFast from the HuggingFace transformers library, preparing it for input into the MT5 model.
+
+The main portion of this project is the fine-tuning of the MT5 model. I ran this on GPUs supplied by [Paperspace](https://www.paperspace.com/core) since they already have CUDA installed, and allow direct access to GPU statistics, unlike Google Colab pro+. Availability of these detailed GPU performance metrics was a key factor in guiding the fine-tuning process. Analyzing the GPU utilization and the time spent accessing memory helped in optimizing the hyperparameters for the model. 
+
+
 
 # Results
 
