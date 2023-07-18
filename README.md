@@ -1,4 +1,4 @@
-# Mt5 Fine tuning & CUDA Analysis
+# Mt5 Fine tuning & GPU Analysis
 
 # Intro
 
