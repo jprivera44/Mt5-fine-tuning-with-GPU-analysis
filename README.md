@@ -27,12 +27,27 @@ The main portion of this project is the fine-tuning of the MT5 model. I ran this
 
 Below are the results from the fine tuning of the model to now be able to perform question answering in Spanish based off the SQUAD dataset.
 
-Image 1: Train/loss
-#
-<img src="/images/best_train_loss.png" width="75%">
 
-Above you can see the training loss over time, wtih a slight increase in loss tofwatd the 1k mark for the inputs.
 #
+Image 1: GPU Utilization
+#
+<img src="/images/cuda_statistics.png" width="75%">
+
+The table above is the output from the nsys Nvidia GPU profiler. I am showing this in order to get a better udnerstandign of how exactly the GPU spends time. Let's break down what these actually mean.
+
+ cudaStreamSynchronize(49.9%):
+
+ Here we can see that a lot of time is spent communicating between the CPU & GPU indicating that the code has inefficies with the GPU sitting idle. The current implementation is in PyTorch which could be revisted to see if there is a better framework to use.
+
+ cudaLaunchKernel(27.4%)
+This command above is used to launch cuda kernals which accounts for a quarter of time.
+
+
+
+
+
+
+
 
 Image 2: GPU Utilization
 #
@@ -47,6 +62,13 @@ Image 3: Time spent accessing memory
 
 One of the most time consuming processes within a GPU is the time it takes to transfer data between the disk and GPU. I wanted to graph this out to make sure this wasn't a huge bottleneck, that I needed to address.
 #
+
+
+Image 4: Train/loss
+#
+<img src="/images/best_train_loss.png" width="75%">
+
+Above you can see the training loss over time, wtih a slight increase in loss tofwatd the 1k mark for the inputs.
 
 # Citations and sources
 
