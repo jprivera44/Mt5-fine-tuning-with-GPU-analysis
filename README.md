@@ -50,9 +50,9 @@ One of the most time consuming processes within a GPU is the time it takes to tr
 
 # Citations and sources
 
-Nvidia profiler [link](https://docs.csc.fi/computing/nsys/)
+[Nvidia profiler](https://docs.csc.fi/computing/nsys/)
 
-Mt5 paper [link](https://arxiv.org/abs/2010.11934)
+[Mt5 paper](https://arxiv.org/abs/2010.11934)
 
-Mt5 HuggingFace link [link](https://huggingface.co/docs/transformers/model_doc/mt5)
+[Mt5 HuggingFace model](https://huggingface.co/docs/transformers/model_doc/mt5)
 
