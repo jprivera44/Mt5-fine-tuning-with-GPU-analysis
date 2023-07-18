@@ -58,7 +58,7 @@ The above workflow indicates that there are asynchronous data transfers occuring
 The above graph showcases the GPU utilization across time, this metric was key in hyper paramter runing to make sure I wasn't overloading the GPU, and using it efficiently. This graph chaged from a previous hyper-parameters when the GPU utilization was too low.
 #
 
-Image 3: Time spent accessing memory
+### Time spent accessing memory
 #
 <img src="/images/GPU_time _spent_acc_mem.png" width="75%">
 
