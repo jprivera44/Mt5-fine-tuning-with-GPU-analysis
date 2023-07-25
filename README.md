@@ -74,6 +74,26 @@ Above you can see the training loss over time, wtih a slight increase in loss to
 
 # Citations and sources
 
+@inproceedings{xue-etal-2021-mt5,
+    title = "m{T}5: A Massively Multilingual Pre-trained Text-to-Text Transformer",
+    author = "Xue, Linting  and
+      Constant, Noah  and
+      Roberts, Adam  and
+      Kale, Mihir  and
+      Al-Rfou, Rami  and
+      Siddhant, Aditya  and
+      Barua, Aditya  and
+      Raffel, Colin",
+    booktitle = "Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+    month = jun,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.naacl-main.41",
+    doi = "10.18653/v1/2021.naacl-main.41",
+    pages = "483--498"
+}
+
 [Nvidia profiler](https://docs.csc.fi/computing/nsys/)
 
 [Mt5 paper](https://arxiv.org/abs/2010.11934)
