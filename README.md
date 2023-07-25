@@ -76,7 +76,14 @@ Above you can see the training loss over time, wtih a slight increase in loss to
 
 ## Citations and Sources
 
-**Paper Citation**:
+
+[Nvidia profiler](https://docs.csc.fi/computing/nsys/)
+
+[Mt5 paper](https://arxiv.org/abs/2010.11934)
+
+[Mt5 HuggingFace model](https://huggingface.co/docs/transformers/model_doc/mt5)
+
+#### Official paper citation
 
 ```bibtex
 @inproceedings{xue-etal-2021-mt5,
@@ -102,9 +109,4 @@ Above you can see the training loss over time, wtih a slight increase in loss to
 
 
 
-[Nvidia profiler](https://docs.csc.fi/computing/nsys/)
-
-[Mt5 paper](https://arxiv.org/abs/2010.11934)
-
-[Mt5 HuggingFace model](https://huggingface.co/docs/transformers/model_doc/mt5)
 
